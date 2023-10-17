@@ -19,7 +19,7 @@ public class SQLHelper {
     }
 
     @SneakyThrows
-    private static DataHelper.VerificationCode getVerificationCode() {
+    public static DataHelper.VerificationCode getVerificationCode() {
         var codeSQL = "SELECT code FROME auth_codes ORDER BY created DESC LIMIT 1";
         var conn = getConn();
         var code = runner.query(conn, codeSQL, new ScalarHandler<String>());

@@ -37,7 +37,6 @@ public class BankLoginTest {
         verificationPage.validVerify(verificationCode.getCode());
     }
 
-
     @Test
     @DisplayName("Should get error notification if user is not exist in base")
     void shouldGetErrorNotificationIfLoginWithRandomUserWithoutAddingToBase() {
